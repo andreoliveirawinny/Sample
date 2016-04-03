@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title | Login</title>
+
+    <!-- Backoffice CSS -->
+    @Styles.Render("~/bundles/BackofficeCSS")
+
+    <!-- Backoffice CUSTOM CSS -->
+    @Styles.Render("~/bundles/BackofficeCustomCSS")
+
+    <!-- Backoffice CUSTOM CSS Login -->
+    @Styles.Render("~/bundles/Login")
+
+    <!-- Backoffice Modernizr -->
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <!-- Backoffice - JS-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

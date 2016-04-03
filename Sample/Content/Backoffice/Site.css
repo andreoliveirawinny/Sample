@@ -1,0 +1,101 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #000;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 27px;
+    background-color: #E6E6E6;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h2{
+    color: #008966;
+}
+
+/* NavBar */
+.navbar-inverse {
+    background-color: #054671;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #FFF;
+}
+
+/* Cards */
+.btn-card-red{
+    height: 240px;
+    width: 287px;
+    border-radius: 0px;
+    background-color: #A53939;
+    border-color: #FFF;
+    color: #ffffff;
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+.btn-card-red:hover{
+    background-color: #B36868;
+}
+
+.btn-card-blue{
+    height: 240px;
+    width: 287px;
+    border-radius: 0px;
+    background-color: #3498db;
+    border-color: #FFF;
+    color: #ffffff;
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+.btn-card-blue:hover{
+    background-color: #7BB2D8;
+}
+
+.btn-card-green{
+    height: 240px;
+    width: 287px;
+    border-radius: 0px;
+    background-color: #009C74;
+    border-color: #FFF;
+    color: #ffffff;
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+.btn-card-green:hover{
+    background-color: #8DCEBD;
+}
+
+.btn-card-grey{
+    height: 240px;
+    width: 287px;
+    border-radius: 0px;
+    background-color: #464545;
+    border-color: #FFF;
+    color: #ffffff;
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+.btn-card-grey:hover{
+    background-color: #8C8888;
+}
