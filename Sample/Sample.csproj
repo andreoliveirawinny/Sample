@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -151,11 +159,19 @@
     <Compile Include="Areas\Backoffice\BackofficeAreaRegistration.cs" />
     <Compile Include="Areas\Backoffice\Controllers\CategoriasController.cs" />
     <Compile Include="Areas\Backoffice\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Backoffice\Controllers\LoginController.cs" />
     <Compile Include="Areas\Backoffice\Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\SampleContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604042003186_add_user_table.cs" />
+    <Compile Include="Migrations\201604042003186_add_user_table.Designer.cs">
+      <DependentUpon>201604042003186_add_user_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +200,7 @@
     <Content Include="Areas\Backoffice\Views\Shared\Extra\_NavBar.cshtml" />
     <Content Include="Areas\Backoffice\Views\Shared\Extra\_Sidebar.cshtml" />
     <Content Include="Areas\Backoffice\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Backoffice\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -196,7 +213,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -217,7 +236,7 @@
     <Folder Include="Areas\Backoffice\Models\" />
     <Folder Include="Areas\Backoffice\Views\Categorias\" />
     <Folder Include="Areas\Backoffice\Views\Produtos\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\Images\" />
     <Folder Include="Scripts\Backoffice\" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +246,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604042003186_add_user_table.resx">
+      <DependentUpon>201604042003186_add_user_table.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

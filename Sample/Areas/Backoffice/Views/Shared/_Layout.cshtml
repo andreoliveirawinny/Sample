@@ -14,12 +14,13 @@
 
 </head>
 <body>
+    <div class="sample-normal-body">
+        @Html.Partial("Extra/_NavBar")
+        @Html.Partial("Extra/_SideBar")
 
-    @Html.Partial("Extra/_NavBar")
-    @Html.Partial("Extra/_SideBar")
-
-    <div class="container body-content">
-        @RenderBody()
+        <div class="container body-content">
+            @RenderBody()
+        </div>
     </div>
 
     <!-- Backoffice - JS-->

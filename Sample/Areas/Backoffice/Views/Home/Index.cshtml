@@ -6,17 +6,64 @@
 <h2>Bem-Vindo ao Backoffice</h2>
 
 <div class="row">
-    <div class="col-lg-3">
-        @Html.ActionLink("Categorias", "Index", "Categorias", new { area = "Backoffice" }, new { @class = "btn btn-info btn-card-red", @type = "button" })
+
+    <!-- Categorias -->
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="btn-group" role="group" aria-label="...">
+                            @Html.ActionLink("Ver Todos", "Index", "Categorias", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                            @Html.ActionLink("Criar", "Index", "Categorias", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                            @Html.ActionLink("Outro", "Index", "Categorias", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body btn btn-success btn-card-blue">
+                Categorias
+            </div>
+        </div>
     </div>
-    <div class="col-lg-3">
-        @Html.ActionLink("Produtos", "Index", "Produtos", new { area = "Backoffice" }, new { @class = "btn btn-danger btn-card-green", @type = "button" })
+
+    <!-- Produtos -->
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="btn-group" role="group" aria-label="...">
+                            @Html.ActionLink("Ver Todos", "Index", "Produtos", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                            @Html.ActionLink("Criar", "Index", "Produtos", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                            @Html.ActionLink("Outro", "Index", "Produtos", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body btn btn-success btn-card-red">
+                Produtos
+            </div>
+        </div>
     </div>
-    <div class="col-lg-3">
-        @Html.ActionLink("Descontos", "Index", "Home", new { area = "Backoffice" }, new { @class = "btn btn-default btn-card-blue", @type = "button" })
-    </div>
-    <div class="col-lg-3">
-        @Html.ActionLink("Dashboard", "Index", "Home", new { area = "Backoffice" }, new { @class = "btn btn-success btn-card-grey", @type = "button" })
+
+    <!-- Dashboard -->
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="btn-group" role="group" aria-label="...">
+                            @Html.ActionLink("Ver Todos", "Index", "Dashboard", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                            @Html.ActionLink("Criar", "Index", "Dashboard", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                            @Html.ActionLink("Outro", "Index", "Dashboard", new { area = "Backoffice" }, new { @class = "btn sample-panel-btn", @type = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body btn btn-success btn-card-grey">
+                Dashboard
+            </div>
+        </div>
     </div>
 </div>
-
