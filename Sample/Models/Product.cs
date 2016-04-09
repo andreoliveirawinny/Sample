@@ -13,12 +13,14 @@ namespace Sample.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Descricao { get; set; }
+        public string Description { get; set; }
         [Required]
-        public double Preco { get; set; }
+        public double Price { get; set; }
         [Required]
-        public int Quantidade { get; set; }
-        public int Ano { get; set; }
+        public double PriceInPromotion { get; set; }
+        [Required]
+        public int Quantity { get; set; }
+        public int Year { get; set; }
         public bool Is_InPromotion { get; set; }
         public bool Is_Highlighted { get; set; }
 

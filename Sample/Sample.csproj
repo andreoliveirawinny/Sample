@@ -160,7 +160,7 @@
     <Compile Include="Areas\Backoffice\Controllers\CategoriasController.cs" />
     <Compile Include="Areas\Backoffice\Controllers\HomeController.cs" />
     <Compile Include="Areas\Backoffice\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Backoffice\Controllers\ProdutosController.cs" />
+    <Compile Include="Areas\Backoffice\Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\SampleContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -170,7 +170,12 @@
     <Compile Include="Migrations\201604042003186_add_user_table.Designer.cs">
       <DependentUpon>201604042003186_add_user_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604091720593_add_product_table.cs" />
+    <Compile Include="Migrations\201604091720593_add_product_table.Designer.cs">
+      <DependentUpon>201604091720593_add_product_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -201,6 +206,8 @@
     <Content Include="Areas\Backoffice\Views\Shared\Extra\_Sidebar.cshtml" />
     <Content Include="Areas\Backoffice\Views\Home\Index.cshtml" />
     <Content Include="Areas\Backoffice\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Backoffice\Views\Products\Create.cshtml" />
+    <Content Include="Areas\Backoffice\Views\Products\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -235,7 +242,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Backoffice\Models\" />
     <Folder Include="Areas\Backoffice\Views\Categorias\" />
-    <Folder Include="Areas\Backoffice\Views\Produtos\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Scripts\Backoffice\" />
   </ItemGroup>
@@ -250,6 +256,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604042003186_add_user_table.resx">
       <DependentUpon>201604042003186_add_user_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604091720593_add_product_table.resx">
+      <DependentUpon>201604091720593_add_product_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

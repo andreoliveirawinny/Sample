@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sample.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace Sample.Areas.Backoffice.Controllers
 {
     public class CategoriasController : Controller
     {
+        SampleContext db = new SampleContext();
+
         // GET: Backoffice/Categorias
         public ActionResult Index()
         {

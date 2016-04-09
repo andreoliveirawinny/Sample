@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sample.DAL;
+using Sample.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,12 +8,14 @@ using System.Web.Mvc;
 
 namespace Sample.Areas.Backoffice.Controllers
 {
-    public class ProdutosController : Controller
+    public class ProductsController : Controller
     {
+        SampleContext db = new SampleContext();
+
         // GET: Backoffice/Produtos
         public ActionResult Index()
         {
-            return View();
+            return View(db.Products.ToList());
         }
 
         // GET: Backoffice/Produtos/Details/5
@@ -28,15 +32,15 @@ namespace Sample.Areas.Backoffice.Controllers
 
         // POST: Backoffice/Produtos/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create([Bind(Include = "Name, Description, Price, PriceInPromotion, Quantity")]Product product)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                db.Products.Add(product);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
+            else
             {
                 return View();
             }

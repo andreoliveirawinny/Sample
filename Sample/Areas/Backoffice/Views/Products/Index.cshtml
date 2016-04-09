@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Sample.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Backoffice/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if (!Model.Any())
+{
+    <div>Não há registos.</div>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceInPromotion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_InPromotion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_Highlighted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_Deleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deleted_At)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created_At)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modified_At)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriceInPromotion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Is_InPromotion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Is_Highlighted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Is_Deleted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deleted_At)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created_At)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modified_At)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
